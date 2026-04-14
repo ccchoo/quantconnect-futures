@@ -54,7 +54,7 @@ class MultiCommodityTermStructureMomentum(QCAlgorithm):
             chain = self.FutureChainProvider.GetFutureContractList(sym, self.Time)
             if not chain or len(chain) == 0:
                 continue
-            front_contract = sorted(chain, key=lambda c: c.Expiry)[0]
+            front_contract = sorted(chain, key=lambda c: c.ID.Date)[0]
             csym = front_contract.Symbol
 
             if not data.ContainsKey(csym) or data[csym] is None:
