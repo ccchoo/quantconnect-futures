@@ -1,0 +1,7 @@
+{
+  "name": "CMT V1: Term Structure + Momentum",
+  "version": "1.0.0",
+  "description": "Multi-commodity futures: 63d momentum + term structure carry, inverse-vol weighted, 3-way, 5d rebalance. IS: 2020-2023.",
+  "market": "commodity",
+  "hypothesis": "63d momentum + term structure (roll yield proxy) generates alpha in commodity futures. Commodities exhibit strong contango/backwardation cycles that create roll yield independent of price direction."
+}
