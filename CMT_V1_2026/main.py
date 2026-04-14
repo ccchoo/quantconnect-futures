@@ -50,10 +50,10 @@ class MultiCommodityTermStructureMomentum(QCAlgorithm):
 
         for ticker, sym in self.future_symbols.items():
             # Use the canonical continuous symbol for history
-            if not data.ContainsKey(sym):
+            if sym not in data.Bars:
                 continue
 
-            price = data[sym].Close
+            price = data.Bars[sym].Close
             if price <= 0:
                 continue
 
